@@ -6,35 +6,23 @@
   <title>Roa's Construction</title>
   <meta name="description" content="Roa's Construction — full-service electrical, plumbing and construction services serving the Tri-State area (New Jersey, Pennsylvania, Delaware). Get a free estimate today." />
 
-  <!-- 1) Serif heading font + system UI font for body -->
+  <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- 2) Favicon (will load favicon.png if you upload it; fallback to favicon.svg provided) -->
-  <link rel="icon" href="/favicon.png.ico" type="image/png">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <!-- Favicon (use relative file names and correct file types) -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="styles.css" />
   <meta name="theme-color" content="#123447" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Roa's Construction",
-    "telephone": "+12672525995",
-    "email": "roaconstructionservice.llc@gmail.com",
-    "areaServed": ["New Jersey","Pennsylvania","Delaware"],
-    "description": "Electrical, plumbing and general construction services serving the tri-state area.",
-    "url": "."
-  }
-  </script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <!-- Replace the SVG placeholder with your logo image (upload logo.png to repo root) -->
-        <img src="/logo.png" alt="Roa's Construction logo" class="logo-img" width="64" height="64">
+        <!-- Use relative path (no leading slash) so it resolves correctly on GitHub Pages project sites -->
+        <img src="logo.png" alt="Roa's Construction logo" class="logo-img" width="64" height="64">
         <div>
           <h1 class="site-title">Roa's Construction</h1>
           <p class="site-tag">Electrical • Plumbing • Construction — NJ · PA · DE</p>
@@ -52,7 +40,6 @@
 
   <!-- rest of your page remains unchanged -->
 </body>
-</html>
 
   <main>
     <section class="hero">
