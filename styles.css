@@ -126,4 +126,50 @@ body::before{
 @media (min-width:901px) and (max-width:1300px){
   .hero-inner{grid-template-columns:1fr 260px}
   .services-grid{grid-template-columns:repeat(2,1fr)}
+
+  /* ========== Typography: use Playfair Display for headings ========== */
+:root{
+  --heading-font: "Playfair Display", serif;
+  --body-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Apply fonts site-wide (body uses Inter, headings use Playfair) */
+body {
+  font-family: var(--body-font);
+}
+
+.site-title,
+.section-title,
+.hero-copy h2 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  color: var(--gold); /* keeps headings in the gold color */
+}
+
+/* Logo image styling - replaces previous svg */
+.logo-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  padding: 6px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Header alignment: keep brand items vertically centered */
+.brand { display:flex; align-items:center; gap:.75rem; }
+
+/* If your logo is taller on mobile, make it slightly smaller */
+@media (max-width: 900px) {
+  .logo-img { width:52px; height:52px; }
+  .site-title { font-size: 1rem; }
+}
+
+/* Improve contrast for headings on very small screens */
+@media (max-width: 480px) {
+  .hero-copy h2 { font-size: 1.45rem; }
+}
 }
